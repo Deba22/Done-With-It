@@ -1,21 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import React,{ useState } from "react";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import AccountScreen from "./app/screens/AccountScreen";
-import ListingsScreen from "./app/screens/ListingsScreen";
-import AppTextInput from "./app/components/AppTextInput";
-import Screen from "./app/components/Screen";
-import AppPicker from "./app/components/AppPicker";
-import LoginScreen from "./app/screens/LoginScreen";
-import RegisterScreen from "./app/screens/RegisterScreen";
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
-  
   return (
-    <ListingEditScreen/>
+    <NavigationContainer theme={navigationTheme}>
+        <AppNavigator />
+    </NavigationContainer>
   );
 }
